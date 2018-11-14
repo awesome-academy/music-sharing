@@ -1,0 +1,4 @@
+$("#show_lyrics").html("<%= j render partial: 'lyrics', collection: @lyrics,
+  as: :lyric %>");
+$("#paginate_lyric").html("<%= j paginate(@lyrics, theme: 'twitter-bootstrap-3',
+  remote: true) %>");

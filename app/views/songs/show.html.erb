@@ -14,7 +14,13 @@
           <div id="head_lyric"></div>
           <%= audio_tag @song.song_url.url, controls: true %>
           <p><strong><%= t ".lyric" %></strong>
-            <%= render "lyrics/lyrics" %>
+            <div id="lyrics_accept">
+              <%= render "lyrics/lyrics" %>
+            </div>
+            <div id="paginate_lyric_show">
+              <%= paginate @lyrics, theme: "twitter-bootstrap-3",
+                remote: true %>
+            </div>
           </p>
           <button type="button" class="btn btn-default btn-xs">
             <i class="fa fa-thumbs-o-down"></i> <%= t ".dislike"%>

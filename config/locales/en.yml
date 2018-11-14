@@ -154,6 +154,31 @@ en:
         create_fail: "Create singer fail! Please check imformation."
       load_singer:
         not_found: "Not found singer with id is %{id}."
+    lyrics:
+      index:
+        title: "Manage Lyrics"
+        filter: "Filter"
+        content: "Content"
+        commenter: "Commenter"
+        song: "Song"
+        created: "created_at"
+        status: "Status"
+        action: "Action"
+      lyrics:
+        show: "See details"
+        delete: "Delete"
+        sure: "You definitely want to delete this lyric!!"
+        unaccept: "Unaccept"
+        accept: "Accept"
+      destroy:
+        delete_successfully: "Delete successfully"
+        delete_failed: "Delete failed"
+      update:
+        accept_successfully: "Accept successfully"
+        accept_failed: "Accept failed"
+        unaccept_successfully: "Unaccept successfully"
+        unaccept_failed: "Unaccept successfully"
+  lyric: "Lyric:"
   shared:
     header:
       B: "B"
@@ -365,3 +390,5 @@ en:
       create_successfully: "Create lyric successfully. Wait admin accept!"
     lyrics:
       see_more: "v See more..."
+  translations_js:
+    admin_filters: "No result found"

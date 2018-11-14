@@ -1,0 +1,37 @@
+<tr>
+  <td>
+    <% if lyric.content.present? %>
+      <%= truncate(lyric.content, length: Settings.truncate.content_lyric) %>
+    <% else %>
+      <%= t ".no_lyric" %>
+    <% end %>
+  </td>
+  <td><%= lyric.user_name %></td>
+  <td><%= lyric.song_name %></td>
+  <td><%= lyric.created_at.strftime("%d/%m/%Y - %I:%M %p") %></td>
+  <td>
+    <% if lyric.accepted? %>
+      <i class="fa fa-check icon-acepted"></i>
+    <% else %>
+      <i class="fa fa-remove icon-unacepted"></i>
+    <% end %>
+  </td>
+  <td>
+    <% if logged_in? && lyric.accepted? %>
+      <%= link_to t(".unaccept"), admin_lyric_path(lyric), method: :put %>
+    <% else %>
+      <%= link_to t(".accept"), admin_lyric_path(lyric), method: :put %>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to admin_lyric_path(lyric), data: {toggle: "modal",
+      target: "#see_details"}, remote: true do %>
+      <i class="fa fa-eye" title="<%= t '.show' %>"></i>
+    <% end %>
+    <%= link_to admin_lyric_path(lyric), method: :delete,
+      data: {confirm: t(".sure")} do %>
+      <i class="fa fa-trash" title="<%= t '.delete' %>"></i>
+    <% end %>
+  </td>
+</tr>
+<div id="see_details" class="modal fade" role="dialog"></div>

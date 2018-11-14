@@ -20,5 +20,6 @@ Rails.application.routes.draw do
     resources :singers
     resources :authors
     resources :users, except: %i(new create)
+    resources :lyrics, except: %i(new create)
   end
 end
