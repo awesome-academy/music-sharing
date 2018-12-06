@@ -18,4 +18,7 @@
 //= require react_ujs
 //= require components
 //= require custom
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require_tree .

@@ -19,8 +19,12 @@ show: 5
 page:
   my_album: 10
   my_song: 10
+  admin_lyrics: 10
   show_lyric: 1
 truncate:
   name_album: 12
 users:
   show: 10
+truncate:
+  name_album: 12
+  content_lyric: 50

@@ -23,11 +23,10 @@ class UsersController < ApplicationController
     if @user.save
       @user.send_activation_email
       flash[:info] = t "users.create.success"
-      redirect_to root_url
     else
       flash[:danger] = t "users.create.fail"
-      redirect_to root_url
     end
+    redirect_to root_url
   end
 
   def edit; end

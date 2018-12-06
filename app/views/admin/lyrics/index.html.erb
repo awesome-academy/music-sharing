@@ -1,0 +1,34 @@
+<% provide :title, t(".title") %>
+<div class="panel panel-primary filterable">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= t ".title" %></h3>
+    <div class="pull-right">
+      <button class="btn btn-default btn-xs btn-filter">
+        <span class="glyphicon glyphicon-filter"></span> <%= t ".filter" %>
+      </button>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr class="filters">
+        <th><input type="text" class="form-control"
+          placeholder="<%= t '.content' %>" disabled></th>
+        <th><input type="text" class="form-control"
+          placeholder="<%= t '.commenter' %>" disabled></th>
+        <th><input type="text" class="form-control"
+          placeholder="<%= t '.song' %>" disabled></th>
+        <th><input type="text" class="form-control"
+          placeholder="<%= t '.created' %>" disabled></th>
+        <th><%= t ".status" %></th>
+        <th><%= t ".accept" %></th>
+        <th><%= t ".action" %></th>
+      </tr>
+    </thead>
+    <tbody id="show_lyrics">
+      <%= render partial: "lyrics", collection: @lyrics, as: :lyric %>
+    </tbody>
+  </table>
+</div>
+<div id="paginate_lyric">
+  <%= paginate @lyrics, theme: "twitter-bootstrap-3", remote: true %>
+</div>

@@ -1,3 +1,4 @@
+
 #create admin
 User.create! name: "Admin", email: "admin@bmusic.com", phone: "0376542134",
   role: 2, password: "123123", password_confirmation: "123123",
@@ -17,7 +18,7 @@ User.create! name: "Admin", email: "admin@bmusic.com", phone: "0376542134",
 end
 
 #create category
-20.times do |n|
+10.times do |n|
   user_id = n + 1
   name = FFaker::Music.unique.genre
   info = "info"

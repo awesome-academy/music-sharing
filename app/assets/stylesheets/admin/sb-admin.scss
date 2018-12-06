@@ -26,9 +26,10 @@
 }
 .row{
   p{
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 5px;
   }
+
 }
 .col-md-3, .col-md-6{
   p{
@@ -487,4 +488,26 @@ table.dataTable thead .sorting:after {
 
 .text-center{
   text-align: center;
+}
+
+/*admin lyrics*/
+
+.icon-unacepted {color: $unacepted}
+.icon-acepted {color: $acepted}
+.filterable {
+  margin-top: 15px;
+  .panel-heading .pull-right {margin-top: -20px;}
+  .filters{
+    input[disabled] {
+      background-color: transparent;
+      border: none;
+      cursor: auto;
+      box-shadow: none;
+      padding: 0;
+      height: auto;
+    }
+    input[disabled]::-webkit-input-placeholder {color: $color_mine_shaft_approx;}
+    input[disabled]::-moz-placeholder {color: $color_mine_shaft_approx;}
+    input[disabled]:-ms-input-placeholder {color: $color_mine_shaft_approx;}
+  }
 }
